@@ -17,7 +17,7 @@ jobs:
       # STAP 2: Haal de data op
       - name: Fetch data
         run: |
-          curl -s "JE_SCRIPT_URL" > data.json
+          curl -s "https://script.google.com/macros/s/AKfycbw8MHQH8V75bxn68rPSoiY5dLti6tVBFmACPWyDMprcKikNkDcCJJxAld-16-FHITYi/exec" > data.json
           echo "Data van $(date)" >> log.txt  # Debug
 
       # STAP 3: Push wijzigingen
