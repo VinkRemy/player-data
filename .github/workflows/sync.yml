@@ -1,31 +1,32 @@
-name: Sync Raw JSON Data
+name: JSON Sync
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch:
+    - cron: '*/5 * * * *'  # Elke 5 minuten
+  workflow_dispatch:        # Handmatig triggeren mogelijk
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch pure JSON
+      - name: Download RAW JSON
         run: |
-          # Voeg deze header toe om HTML te omzeilen
-          curl -s -H "Accept: application/json" "https://script.google.com/macros/s/AKfycbw8MHQH8V75bxn68rPSoiY5dLti6tVBFmACPWyDMprcKikNkDcCJJxAld-16-FHITYi/exec" > data.json
+          # Gebruik curl met -L om redirects te volgen
+          curl -Ls "https://script.google.com/macros/s/AKfycbw8MHQH8V75bxn68rPSoiY5dLti6tVBFmACPWyDMprcKikNkDcCJJxAld-16-FHITYi/exec" > data.json
           
-          # Valideer of het echte JSON is
-          jq empty data.json || (echo "Geen geldige JSON!" && exit 1)
+          # Simpele check of het JSON is
+          if ! grep -q '{' data.json; then
+            echo "ERROR: Geen JSON ontvangen!"
+            head data.json  # Toon eerste regels voor debug
+            exit 1
+          fi
 
-      - name: Push changes
+      - name: Push naar GitHub
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "GitHub Bot"
+          git config user.email "actions@users.noreply.github.com"
           git add data.json
-          git commit -m "Update: $(date +'%Y-%m-%d %H:%M')" || exit 0
+          git commit -m "Auto-update: $(date +'%H:%M')" || exit 0
           git push
