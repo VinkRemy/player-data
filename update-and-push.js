@@ -6,34 +6,45 @@ const dotenv = require('dotenv');
 // Laad je .env bestand
 dotenv.config();
 
+// Haal je GitHub-token en repo-gegevens op
+const token = process.env.GITHUB_TOKEN;
 const repoUrl = process.env.GITHUB_REPO_URL;
 const branch = process.env.GITHUB_BRANCH || 'main';
+
+// GitHub repo voorbereiden
 const git = simpleGit();
 
-const url = 'https://vinkremy.github.io/player-data/data.json';
-
+// Haal JSON op en sla op als data.json
+const url = 'https://vinkremy.github.io/player-data/data.json'; // Jouw JSON-URL
 fetch(url)
   .then(res => res.json())
-  .then(data => {
+  .then(async data => {
     fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
     console.log('✅ data.json is bijgewerkt!');
 
-    git
-      .silent(true)
-      .init()
-      .checkoutLocalBranch(branch)  // <-- Hier zorg je dat 'main' bestaat lokaal
-      .add('.')
-      .commit('Auto-update van data.json')
-      .then(() => git.getRemotes(true))
-      .then(remotes => {
-        const hasOrigin = remotes.some(r => r.name === 'origin');
-        if (!hasOrigin) {
-          return git.addRemote('origin', repoUrl);
-        }
-      })
-      .then(() => git.push('origin', branch))
-      .then(() => console.log('✅ Push succesvol!'))
-      .catch(err => console.error('❌ Fout bij pushen naar GitHub:', err));
+    try {
+      // Controleer of de remote al bestaat
+      const remotes = await git.getRemotes(true);
+      const originExists = remotes.some(remote => remote.name === 'origin');
+      
+      if (originExists) {
+        // Als origin bestaat, update de URL
+        await git.removeRemote('origin');
+      }
+      
+      // Voeg de remote toe
+      await git.addRemote('origin', repoUrl);
+      
+      // Voeg bestanden toe, commit en push
+      await git.add('.');
+      await git.commit('Auto-update van data.json');
+      
+      // Push met authenticatie
+      await git.push(['-u', 'origin', branch, '--force']);
+      console.log('✅ Push succesvol!');
+    } catch (err) {
+      console.error('❌ Fout bij pushen naar GitHub:', err);
+    }
   })
   .catch(err => {
     console.error('❌ Fout bij ophalen van JSON:', err);
