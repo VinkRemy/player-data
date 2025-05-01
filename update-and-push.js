@@ -6,26 +6,22 @@ const dotenv = require('dotenv');
 // Laad je .env bestand
 dotenv.config();
 
-// Haal env-variabelen op
 const repoUrl = process.env.GITHUB_REPO_URL;
 const branch = process.env.GITHUB_BRANCH || 'main';
-
-// Bereid git voor
 const git = simpleGit();
 
-// De URL van de JSON
 const url = 'https://vinkremy.github.io/player-data/data.json';
 
-// Haal JSON op en sla op als data.json
 fetch(url)
   .then(res => res.json())
   .then(data => {
     fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
     console.log('✅ data.json is bijgewerkt!');
 
-    // Voer git-commando’s uit
     git
       .silent(true)
+      .init()
+      .checkoutLocalBranch(branch)  // <-- Hier zorg je dat 'main' bestaat lokaal
       .add('.')
       .commit('Auto-update van data.json')
       .then(() => git.getRemotes(true))
