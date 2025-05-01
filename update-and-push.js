@@ -29,7 +29,7 @@ fetch(url)
       .add('.')
       .commit('Auto-update van data.json')
       .addRemote('origin', repoUrl)
-      .push('origin', branch)
+      .push('origin', main)
       .then(() => console.log('✅ Push succesvol!'))
       .catch(err => console.error('❌ Fout bij pushen naar GitHub:', err));
   })
