@@ -2,7 +2,7 @@ name: Sync Data Every 5 Minutes
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Elke 5 minuten
+    - cron: '*/1 * * * *'  # Elke 5 minuten
   workflow_dispatch:       # Handmatig triggeren mogelijk
 
 jobs:
