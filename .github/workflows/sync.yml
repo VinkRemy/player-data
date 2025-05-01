@@ -1,4 +1,4 @@
-name: Sync Data Every 5 Minutes
+name: Sync Raw JSON Data
 
 on:
   schedule:
@@ -12,17 +12,20 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}  # 👈 Cruciaal!
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch data
+      - name: Fetch pure JSON
         run: |
-          curl -s "https://script.google.com/macros/s/AKfycbw8MHQH8V75bxn68rPSoiY5dLti6tVBFmACPWyDMprcKikNkDcCJJxAld-16-FHITYi/exec" > data.json
-          date >> log.txt
+          # Voeg deze header toe om HTML te omzeilen
+          curl -s -H "Accept: application/json" "https://script.google.com/macros/s/AKfycbw8MHQH8V75bxn68rPSoiY5dLti6tVBFmACPWyDMprcKikNkDcCJJxAld-16-FHITYi/exec" > data.json
+          
+          # Valideer of het echte JSON is
+          jq empty data.json || (echo "Geen geldige JSON!" && exit 1)
 
-      - name: Commit & Push
+      - name: Push changes
         run: |
           git config user.name "GitHub Actions"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
+          git add data.json
           git commit -m "Update: $(date +'%Y-%m-%d %H:%M')" || exit 0
           git push
