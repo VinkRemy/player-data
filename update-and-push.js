@@ -6,30 +6,36 @@ const dotenv = require('dotenv');
 // Laad je .env bestand
 dotenv.config();
 
-// Haal je GitHub-token en repo-gegevens op
-const token = process.env.GITHUB_TOKEN;
+// Haal env-variabelen op
 const repoUrl = process.env.GITHUB_REPO_URL;
-const branch = process.env.GITHUB_BRANCH;
+const branch = process.env.GITHUB_BRANCH || 'main';
 
-// GitHub repo voorbereiden
+// Bereid git voor
 const git = simpleGit();
 
+// De URL van de JSON
+const url = 'https://vinkremy.github.io/player-data/data.json';
+
 // Haal JSON op en sla op als data.json
-const url = 'https://vinkremy.github.io/player-data/data.json'; // Jouw JSON-URL
 fetch(url)
   .then(res => res.json())
   .then(data => {
     fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
     console.log('✅ data.json is bijgewerkt!');
 
-    // Git commando’s om pushen naar GitHub
+    // Voer git-commando’s uit
     git
-      .silent(true)  // voorkom dat git commando’s in de terminal worden getoond
-      .init()  // Initializeer git in de huidige map
+      .silent(true)
       .add('.')
       .commit('Auto-update van data.json')
-      .addRemote('origin', repoUrl)
-      .push('origin', 'main')
+      .then(() => git.getRemotes(true))
+      .then(remotes => {
+        const hasOrigin = remotes.some(r => r.name === 'origin');
+        if (!hasOrigin) {
+          return git.addRemote('origin', repoUrl);
+        }
+      })
+      .then(() => git.push('origin', branch))
       .then(() => console.log('✅ Push succesvol!'))
       .catch(err => console.error('❌ Fout bij pushen naar GitHub:', err));
   })
