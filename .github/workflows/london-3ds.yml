@@ -14,12 +14,12 @@ jobs:
       - name: Download RAW JSON
         run: |
           # Gebruik curl met -L om redirects te volgen
-          curl -Ls "https://script.google.com/macros/s/AKfycbxJD7zi4Dh8LZTd_yiKf6TGxgV8CqCZHCZ9bdGevJZOmSWusmTrmGui_MRW2qeAoTSL/exec" > lodon-3ds.json
+          curl -Ls "https://script.google.com/macros/s/AKfycbxJD7zi4Dh8LZTd_yiKf6TGxgV8CqCZHCZ9bdGevJZOmSWusmTrmGui_MRW2qeAoTSL/exec" > london-3ds.json
           
           # Simpele check of het JSON is
-          if ! grep -q '{' lodon-3ds.json; then
+          if ! grep -q '{' london-3ds.json; then
             echo "ERROR: Geen JSON ontvangen!"
-            head data2.json  # Toon eerste regels voor debug
+            head london-3ds.json  # Toon eerste regels voor debug
             exit 1
           fi
 
@@ -27,6 +27,6 @@ jobs:
         run: |
           git config user.name "GitHub Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add lodon-3ds.json
+          git add london-3ds.json
           git commit -m "Auto-update: $(date +'%H:%M')" || exit 0
           git push
