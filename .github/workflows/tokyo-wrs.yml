@@ -19,7 +19,7 @@ jobs:
           # Simpele check of het JSON is
           if ! grep -q '{' tokyo-wrs.json; then
             echo "ERROR: Geen JSON ontvangen!"
-            head data2.json  # Toon eerste regels voor debug
+            head tokyo-wrs.json  # Toon eerste regels voor debug
             exit 1
           fi
 
