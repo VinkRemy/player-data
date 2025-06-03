@@ -1,0 +1,32 @@
+name: JSON Tokyo
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Elke 5 minuten
+  workflow_dispatch:        # Handmatig triggeren mogelijk
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download RAW JSON
+        run: |
+          # Gebruik curl met -L om redirects te volgen
+          curl -Ls "https://script.google.com/macros/s/AKfycbzKyte9pZvIRGwawjxQhkQDV02yo3hb8eCUjMx27mSmaluPqNGEZrD-CvINGZ8urUAa/exec" > tokyo.json
+          
+          # Simpele check of het JSON is
+          if ! grep -q '{' tokyo.json; then
+            echo "ERROR: Geen JSON ontvangen!"
+            head tokyo.json  # Toon eerste regels voor debug
+            exit 1
+          fi
+
+      - name: Push naar GitHub
+        run: |
+          git config user.name "GitHub Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tokyo.json
+          git commit -m "Auto-update: $(date +'%H:%M')" || exit 0
+          git push
