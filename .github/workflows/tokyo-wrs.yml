@@ -14,10 +14,10 @@ jobs:
       - name: Download RAW JSON
         run: |
           # Gebruik curl met -L om redirects te volgen
-          curl -Ls "https://script.google.com/macros/s/AKfycbxDZR6QRylnpwfdZoNibBOMvHhxSF_QyMKz0JtUt4sx4U2y2xgepR1bia1nvm8lAO6e/exec" > rio-3ds-wrs.json
+          curl -Ls "https://script.google.com/macros/s/AKfycbzxlEoFLn9LbJ5Y4tzNBr2xEnSPsf1Ui84b2kvusSZ2yQGWdoPyOrePSZYGYIjOQStf/exec" > tokyo-wrs.json
           
           # Simpele check of het JSON is
-          if ! grep -q '{' rio-3ds-wrs.json; then
+          if ! grep -q '{' tokyo-wrs.json; then
             echo "ERROR: Geen JSON ontvangen!"
             head data2.json  # Toon eerste regels voor debug
             exit 1
@@ -27,6 +27,6 @@ jobs:
         run: |
           git config user.name "GitHub Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add rio-3ds-wrs.json
+          git add tokyo-wrs.json
           git commit -m "Auto-update: $(date +'%H:%M')" || exit 0
           git push
