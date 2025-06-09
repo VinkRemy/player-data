@@ -9,100 +9,124 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false  # Laat alle jobs voltooien, zelfs als één faalt
       matrix:
         include:
           # Main API's
-          - name: "Player Data"
+          - id: "player_data"
+            name: "Player Data"
             url: "https://script.google.com/macros/s/AKfycbw8MHQH8V75bxn68rPSoiY5dLti6tVBFmACPWyDMprcKikNkDcCJJxAld-16-FHITYi/exec"
             filename: "data/player-data.json"
           
-          - name: "User Accounts Data"
+          - id: "user_accounts"
+            name: "User Accounts Data"
             url: "https://script.google.com/macros/s/AKfycbws2P188dpSPnRRf1ndawDDaAUbEOnzVrd0vNeQLQmijfqeyv1xFHNVyD_l6WIxUtYX/exec"
             filename: "data/user-accounts-data.json"
 
-          - name: "Events Data"
+          - id: "events_data"
+            name: "Events Data"
             url: "https://script.google.com/macros/s/AKfycbyCc0C061J6OmfREOOGDjj9cN3zoVbPO6Yn4A6yXWMvbE92iIlZFfyHl2rPGQPpuJK_/exec"
             filename: "data/events-data.json"
 
           # Leaderboard API's
-          - name: "Beijing Wii Leaderboard Data"
+          - id: "beijing_wii_lb"
+            name: "Beijing Wii Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbzU1GLBGvEER4f2GghfCEHo98dwE-8b6gfmaYuVAsWZmBQV77Uf38BQWBo0msfhsrWW/exec"
             filename: "leaderboards/beijing-wii.json"
           
-          - name: "Beijing DS Leaderboard Data"
+          - id: "beijing_ds_lb"
+            name: "Beijing DS Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbyHaXca0s5WOobFzVG7WB4YlaySHNp0XqJWXvh7RuiShT-qDCd2pV8IdffTrSTYhrzc/exec"
             filename: "leaderboards/beijing-ds.json"
           
-          - name: "Vancouver Wii Leaderboard Data"
+          - id: "vancouver_wii_lb"
+            name: "Vancouver Wii Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbyjLnQmTa-PTUS1aiOxGrZ1sI2kwODrWaApGaI7sZRUCRv3FZqVNW-OOuJJaNwtRlsX/exec"
             filename: "leaderboards/vancouver-wii.json"
           
-          - name: "Vancouver DS Leaderboard Data"
+          - id: "vancouver_ds_lb"
+            name: "Vancouver DS Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbyn3Hx5-IiAcj6w6cwG3SZW_9tpIS40WiNuGO_cd3_CmmR4tkgnPyD5I5RgojidBnMv/exec"
             filename: "leaderboards/vancouver-ds.json"
           
-          - name: "London Wii Leaderboard Data"
+          - id: "london_wii_lb"
+            name: "London Wii Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbys_9KTlfIKPVNpv2HuJUyLCjZP41wbxfd69h8HQOxOX8t9Xw65IYGX9dH_bbuRyQCw/exec"
             filename: "leaderboards/london-wii.json"
           
-          - name: "London 3DS Leaderboard Data"
+          - id: "london_3ds_lb"
+            name: "London 3DS Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbxJD7zi4Dh8LZTd_yiKf6TGxgV8CqCZHCZ9bdGevJZOmSWusmTrmGui_MRW2qeAoTSL/exec"
             filename: "leaderboards/london-3ds.json"
           
-          - name: "Sochi Leaderboard Data"
+          - id: "sochi_lb"
+            name: "Sochi Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbyVrhCVg1MEHC8s20vgyBWKumAtViGKqsYilstiQzgR_m5_nYeZZ6R0DIfPd9lIfnC4/exec"
             filename: "leaderboards/sochi.json"
           
-          - name: "Rio Wii U Leaderboard Data"
+          - id: "rio_wiiu_lb"
+            name: "Rio Wii U Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbyYMN2jvPctIsFyoyjoLfwT5XU90RP08IrZD4aWv-bC2ZYpHFKhqYUZSYf2xB8dWgPh/exec"
             filename: "leaderboards/rio-wiiu.json"
           
-          - name: "Rio 3DS Leaderboard Data"
+          - id: "rio_3ds_lb"
+            name: "Rio 3DS Leaderboard"
             url: "https://script.google.com/macros/s/AKfycby3evf2vhw5dU9nfCfYdf-L8nmTIHhp1tpaMkaG5OCw_VXAipf-eZ4GEU0Mwosh7utv/exec"
             filename: "leaderboards/rio-3ds.json"
           
-          - name: "Tokyo Leaderboard Data"
+          - id: "tokyo_lb"
+            name: "Tokyo Leaderboard"
             url: "https://script.google.com/macros/s/AKfycbzKyte9pZvIRGwawjxQhkQDV02yo3hb8eCUjMx27mSmaluPqNGEZrD-CvINGZ8urUAa/exec"
             filename: "leaderboards/tokyo.json"
 
           # WR History API's
-          - name: "Beijing Wii WR History Data"
+          - id: "beijing_wii_wr"
+            name: "Beijing Wii WR History"
             url: "https://script.google.com/macros/s/AKfycby12b9mBQ0m6ODGx3uqGzBty4XNEP-dxnq-KEAsugXhTL5mNAgrLm29TsL9NgT-kBSD/exec"
             filename: "wr-history/beijing-wii.json"
           
-          - name: "Beijing DS WR History Data"
+          - id: "beijing_ds_wr"
+            name: "Beijing DS WR History"
             url: "https://script.google.com/macros/s/AKfycbx-NOkQvLQcvb4dTrYsh1mM3s3LMsqr4voGFJgloLgm-XeZTK5w3cj-4kfN_NSOky43/exec"
             filename: "wr-history/beijing-ds.json"
           
-          - name: "Vancouver Wii WR History Data"
+          - id: "vancouver_wii_wr"
+            name: "Vancouver Wii WR History"
             url: "https://script.google.com/macros/s/AKfycbzefiocmDtCOzljjpIDzjokpVi4Ya3cB5Di95Les8ra38GELN8V9rQOE8ctJ8laZ-02/exec"
             filename: "wr-history/vancouver-wii.json"
           
-          - name: "Vancouver DS WR History Data"
+          - id: "vancouver_ds_wr"
+            name: "Vancouver DS WR History"
             url: "https://script.google.com/macros/s/AKfycbwHfY7AasJZ8ZxC3ZeqRtD3X9k1WD23MnM22-BN6l6lwYjLIqdQNwhtFBbwFi9bdKxm/exec"
             filename: "wr-history/vancouver-ds.json"
           
-          - name: "London Wii WR History Data"
+          - id: "london_wii_wr"
+            name: "London Wii WR History"
             url: "https://script.google.com/macros/s/AKfycbw4vbLVgm7P59qmBRfRR9N4CWsvMqdPC4ztEtVeNReUiUI3xYSj7AbscvU_dzNnbghA/exec"
             filename: "wr-history/london-wii.json"
           
-          - name: "London 3DS WR History Data"
+          - id: "london_3ds_wr"
+            name: "London 3DS WR History"
             url: "https://script.google.com/macros/s/AKfycbydK4MY45cSWG3HrjQ453zgnxeVPv3ULo5r4WaQrp72VQAUSxzLGVgM-0WNMNj-bHzi/exec"
             filename: "wr-history/london-3ds.json"
           
-          - name: "Sochi WR History Data"
+          - id: "sochi_wr"
+            name: "Sochi WR History"
             url: "https://script.google.com/macros/s/AKfycbxl7zrulRXYS7c6WzgLrR87PWzbm1wl96lJlsCYtcLGFl_-HLxHHlUyheTZlt9hRVaE/exec"
             filename: "wr-history/sochi.json"
           
-          - name: "Rio Wii U WR History Data"
+          - id: "rio_wiiu_wr"
+            name: "Rio Wii U WR History"
             url: "https://script.google.com/macros/s/AKfycbyLS1oBdFglH_3ciPEWVHGrS9KToWJhKbODC6--9D30Wt63wuPoIrhyldsUVar3IIEh/exec"
             filename: "wr-history/rio-wiiu.json"
           
-          - name: "Rio 3DS WR History Data"
+          - id: "rio_3ds_wr"
+            name: "Rio 3DS WR History"
             url: "https://script.google.com/macros/s/AKfycbxDZR6QRylnpwfdZoNibBOMvHhxSF_QyMKz0JtUt4sx4U2y2xgepR1bia1nvm8lAO6e/exec"
             filename: "wr-history/rio-3ds.json"
           
-          - name: "Tokyo WR History Data"
+          - id: "tokyo_wr"
+            name: "Tokyo WR History"
             url: "https://script.google.com/macros/s/AKfycbzxlEoFLn9LbJ5Y4tzNBr2xEnSPsf1Ui84b2kvusSZ2yQGWdoPyOrePSZYGYIjOQStf/exec"
             filename: "wr-history/tokyo.json"
 
@@ -113,21 +137,39 @@ jobs:
         run: |
           mkdir -p data leaderboards wr-history
 
-      - name: Download ${{ matrix.name }}
+      - name: Install jq (JSON validator)
+        run: sudo apt-get install -y jq
+
+      - name: Download ${{ matrix.id }}
+        timeout-minutes: 2  # Timeout na 2 minuten
         run: |
-          curl -Ls "${{ matrix.url }}" > ${{ matrix.filename }}
-          
-          # Validate JSON format
-          if ! jq empty ${{ matrix.filename }} 2>/dev/null; then
-            echo "ERROR: Invalid JSON received for ${{ matrix.name}}!"
-            head ${{ matrix.filename }}
+          # URL validatie
+          if [[ ! "${{ matrix.url }}" =~ ^https:// ]]; then
+            echo "::error::Invalid URL format for ${{ matrix.id }}: ${{ matrix.url }}"
             exit 1
           fi
+          
+          echo "Downloading ${{ matrix.name }}..."
+          if ! curl -Lsf "${{ matrix.url }}" -o "${{ matrix.filename }}"; then
+            echo "::warning::Failed to download ${{ matrix.name }}"
+            exit 0  # Overslaan maar workflow niet laten falen
+          fi
+          
+          # Basis JSON validatie
+          if ! jq empty "${{ matrix.filename }}" 2>/dev/null; then
+            echo "::warning::Potential invalid JSON for ${{ matrix.name }} - saving anyway"
+          fi
 
-      - name: Push changes to GitHub
+      - name: Commit and push changes
         run: |
-          git config user.name "GitHub Bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add .
-          git commit -m "Auto-update ${{ matrix.name }}: $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
-          git push
+          git config user.name "GitHub Actions Bot"
+          git config user.email "github-actions-bot@users.noreply.github.com"
+          
+          git add -A
+          if ! git diff-index --quiet HEAD --; then
+            git commit -m "Auto-update ${{ matrix.id }} [skip ci]"
+            git pull --rebase
+            git push
+          else
+            echo "No changes detected for ${{ matrix.id }}"
+          fi
