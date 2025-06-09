@@ -14,7 +14,7 @@ jobs:
       - name: Download RAW JSON
         run: |
           # Gebruik curl met -L om redirects te volgen
-          curl -Ls "https://script.google.com/macros/s/AKfycbyHaXca0s5WOobFzVG7WB4YlaySHNp0XqJWXvh7RuiShT-qDCd2pV8IdffTrSTYhrzc/exec" > vancouver-wii.json
+          curl -Ls "https://script.google.com/macros/s/AKfycbyjLnQmTa-PTUS1aiOxGrZ1sI2kwODrWaApGaI7sZRUCRv3FZqVNW-OOuJJaNwtRlsX/exec" > vancouver-wii.json
           
           # Simpele check of het JSON is
           if ! grep -q '{' vancouver-wii.json; then
