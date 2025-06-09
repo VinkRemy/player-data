@@ -1,0 +1,32 @@
+name: JSON Vancouver Wii WRs
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Elke 5 minuten
+  workflow_dispatch:        # Handmatig triggeren mogelijk
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download RAW JSON
+        run: |
+          # Gebruik curl met -L om redirects te volgen
+          curl -Ls "https://script.google.com/macros/s/AKfycbzefiocmDtCOzljjpIDzjokpVi4Ya3cB5Di95Les8ra38GELN8V9rQOE8ctJ8laZ-02/exec" > vancouver-wii-wrs.json
+          
+          # Simpele check of het JSON is
+          if ! grep -q '{' vancouver-wii-wrs.json; then
+            echo "ERROR: Geen JSON ontvangen!"
+            head vancouver-wii-wrs.json  # Toon eerste regels voor debug
+            exit 1
+          fi
+
+      - name: Push naar GitHub
+        run: |
+          git config user.name "GitHub Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add vancouver-wii-wrs.json
+          git commit -m "Auto-update: $(date +'%H:%M')" || exit 0
+          git push
