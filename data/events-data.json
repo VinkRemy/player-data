@@ -1,0 +1,358 @@
+const tournamentData = [
+  {
+    "name": "Crappy Covid 2020",
+    "participants": [
+      {
+        "name": "Name",
+        "msid": "MSID",
+        "result": "Result",
+        "roundWins": "Round Wins"
+      },
+      {
+        "name": "Gloupie",
+        "msid": null,
+        "result": "Winner",
+        "roundWins": 3
+      },
+      {
+        "name": "CappyTJ5",
+        "msid": null,
+        "result": "Runner-Up",
+        "roundWins": 2
+      },
+      {
+        "name": "yee312",
+        "msid": "0306",
+        "result": "Final Losers Bracket",
+        "roundWins": 2
+      },
+      {
+        "name": "sarasanugget",
+        "msid": null,
+        "result": "Round 2 Losers Bracket",
+        "roundWins": 1
+      },
+      {
+        "name": "Manucoel",
+        "msid": "0563",
+        "result": "Round 1 Losers Bracket",
+        "roundWins": 0
+      }
+    ]
+  },
+  {
+    "name": "2022 London 3DS Championship",
+    "participants": [
+      {
+        "name": "Name",
+        "msid": "MSID",
+        "result": "Result",
+        "roundWins": "Round Wins"
+      },
+      {
+        "name": "Remy",
+        "msid": "0006",
+        "result": "Winner",
+        "roundWins": 4
+      },
+      {
+        "name": "Vncz",
+        "msid": "0036",
+        "result": "Runner-Up",
+        "roundWins": 3
+      },
+      {
+        "name": "SirToastington",
+        "msid": "0070",
+        "result": "Final Winners Bracket",
+        "roundWins": 2
+      },
+      {
+        "name": "Carterferris07",
+        "msid": "0567",
+        "result": "Final Losers Bracket",
+        "roundWins": 2
+      },
+      {
+        "name": "ViktorJAVO",
+        "msid": "0145",
+        "result": "Semi Final Losers Bracket",
+        "roundWins": 2
+      },
+      {
+        "name": "Andres",
+        "msid": "0028",
+        "result": "Semi Final Losers Bracket",
+        "roundWins": 1
+      },
+      {
+        "name": "Erex",
+        "msid": null,
+        "result": "Round 2 Losers Bracket",
+        "roundWins": 1
+      },
+      {
+        "name": "Zaxxa",
+        "msid": "0364",
+        "result": "Round 2 Losers Bracket",
+        "roundWins": 1
+      },
+      {
+        "name": "JenteJ",
+        "msid": "0004",
+        "result": "Round 1 Losers Bracket",
+        "roundWins": 0
+      }
+    ]
+  },
+  {
+    "name": "Tokyo Tyranny Tournament 2023",
+    "participants": [
+      {
+        "name": "Name",
+        "msid": "MSID",
+        "result": "Result",
+        "roundWins": "Round Wins"
+      },
+      {
+        "name": "silkychris999",
+        "msid": "0257",
+        "result": "Winner",
+        "roundWins": 4
+      },
+      {
+        "name": "yee312",
+        "msid": "0306",
+        "result": "Runner-Up",
+        "roundWins": 3
+      },
+      {
+        "name": "Manucoel",
+        "msid": "0563",
+        "result": "Round 3 Losers Bracket",
+        "roundWins": 2
+      },
+      {
+        "name": "Nameless",
+        "msid": "0279",
+        "result": "Round 2 Losers Bracket",
+        "roundWins": 1
+      },
+      {
+        "name": "Remy",
+        "msid": "0006",
+        "result": "Round 1 Losers Bracket",
+        "roundWins": 0
+      },
+      {
+        "name": "Ricci",
+        "msid": "0003",
+        "result": "Round 1 Losers Bracket",
+        "roundWins": 0
+      }
+    ]
+  },
+  {
+    "name": "M&S World Championship 2024",
+    "participants": [
+      {
+        "name": "Name",
+        "msid": "MSID",
+        "result": "Result",
+        "roundWins": "Round Wins"
+      },
+      {
+        "name": "Ricci",
+        "msid": "0003",
+        "result": "Winner",
+        "roundWins": 3
+      },
+      {
+        "name": "Wolfy99",
+        "msid": "0053",
+        "result": "Runner-Up",
+        "roundWins": 1
+      },
+      {
+        "name": "Remy",
+        "msid": "0006",
+        "result": "3rd",
+        "roundWins": 1
+      },
+      {
+        "name": "SirToastington",
+        "msid": "0070",
+        "result": "4th",
+        "roundWins": 0
+      },
+      {
+        "name": "Nameless",
+        "msid": "0279",
+        "result": "5th",
+        "roundWins": 0
+      },
+      {
+        "name": "Ned",
+        "msid": "0306",
+        "result": "6th",
+        "roundWins": 0
+      },
+      {
+        "name": "ioha",
+        "msid": "0013",
+        "result": "7th",
+        "roundWins": 0
+      },
+      {
+        "name": "silkychris999",
+        "msid": "0257",
+        "result": "8th",
+        "roundWins": 0
+      },
+      {
+        "name": "Manucoel",
+        "msid": "0563",
+        "result": "9th",
+        "roundWins": 0
+      },
+      {
+        "name": "Aim",
+        "msid": "0316",
+        "result": "10th",
+        "roundWins": 0
+      },
+      {
+        "name": "graey",
+        "msid": "2164",
+        "result": "11th",
+        "roundWins": 0
+      },
+      {
+        "name": "ViktorJAVO",
+        "msid": "0145",
+        "result": "12th",
+        "roundWins": 0
+      },
+      {
+        "name": "Hayden",
+        "msid": "0005",
+        "result": "13th",
+        "roundWins": 0
+      },
+      {
+        "name": "ray",
+        "msid": "0082",
+        "result": "14th",
+        "roundWins": 0
+      },
+      {
+        "name": "LFG Mwenyu",
+        "msid": "0560",
+        "result": "15th",
+        "roundWins": 0
+      },
+      {
+        "name": "Chall99",
+        "msid": "0075",
+        "result": "16th",
+        "roundWins": 0
+      },
+      {
+        "name": "Blazeren",
+        "msid": null,
+        "result": "17th",
+        "roundWins": 0
+      },
+      {
+        "name": "Nogumiroai",
+        "msid": null,
+        "result": "18th",
+        "roundWins": 0
+      },
+      {
+        "name": "Carterferris07",
+        "msid": "0567",
+        "result": "19th",
+        "roundWins": 0
+      },
+      {
+        "name": "Sniwott",
+        "msid": "0181",
+        "result": "20th",
+        "roundWins": 0
+      },
+      {
+        "name": "Zaxxa",
+        "msid": "0364",
+        "result": "21st",
+        "roundWins": 0
+      },
+      {
+        "name": "Ackman",
+        "msid": "0050",
+        "result": "22nd",
+        "roundWins": 0
+      },
+      {
+        "name": "Pikoow",
+        "msid": null,
+        "result": "23rd",
+        "roundWins": 0
+      },
+      {
+        "name": "Alex",
+        "msid": null,
+        "result": "24th",
+        "roundWins": 0
+      },
+      {
+        "name": "Quadernetz",
+        "msid": null,
+        "result": "25th",
+        "roundWins": 0
+      },
+      {
+        "name": "Coincouch",
+        "msid": "2196",
+        "result": "26th",
+        "roundWins": 0
+      },
+      {
+        "name": "Echo",
+        "msid": "0158",
+        "result": "27th",
+        "roundWins": 0
+      },
+      {
+        "name": "Gaveen",
+        "msid": null,
+        "result": "28th",
+        "roundWins": 0
+      },
+      {
+        "name": "XanderT",
+        "msid": "0744",
+        "result": "29th",
+        "roundWins": 0
+      },
+      {
+        "name": "you_wouldn't_understand1933",
+        "msid": null,
+        "result": "30th",
+        "roundWins": 0
+      },
+      {
+        "name": "JenteJ",
+        "msid": "0004",
+        "result": "31st",
+        "roundWins": 0
+      },
+      {
+        "name": "bessechurger",
+        "msid": null,
+        "result": "32nd",
+        "roundWins": 0
+      }
+    ]
+  }
+];
