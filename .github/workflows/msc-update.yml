@@ -145,9 +145,9 @@ jobs:
         run: |
           # URL validatie
           if [[ ! "${{ matrix.url }}" =~ ^https:// ]]; then
-  echo "::warning::Invalid URL format for ${{ matrix.id }}: ${{ matrix.url }}"
-fi
-          
+            echo "::warning::Invalid URL format for ${{ matrix.id }}: ${{ matrix.url }}"
+          fi
+
           echo "Downloading ${{ matrix.name }}..."
           if ! curl -Lsf "${{ matrix.url }}" -o "${{ matrix.filename }}"; then
             echo "::warning::Failed to download ${{ matrix.name }}"
@@ -168,7 +168,7 @@ fi
           if ! git diff-index --quiet HEAD --; then
             git commit -m "Auto-update ${{ matrix.id }} [skip ci]"
             git pull --rebase || (echo "::error::Failed to rebase. Check for conflicts." && exit 1)
-git push || (echo "::error::Failed to push changes. Check remote branch status." && exit 1)
+            git push || (echo "::error::Failed to push changes. Check remote branch status." && exit 1)
           else
             echo "No changes detected for ${{ matrix.id }}"
           fi
