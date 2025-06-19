@@ -28,6 +28,11 @@ jobs:
             url: "https://script.google.com/macros/s/AKfycbyCc0C061J6OmfREOOGDjj9cN3zoVbPO6Yn4A6yXWMvbE92iIlZFfyHl2rPGQPpuJK_/exec"
             filename: "data/events-data.json"
 
+          - id: "videos_data"
+            name: "Videos Data"
+            url: "https://script.google.com/macros/s/AKfycbyGYBU_18_i6QsXi1wmsLwaJg2tMhB8e4a34UMhT6ZElJ-t3QEv5JNG0dgFORWZdoGL/exec"
+            filename: "data/videos-data.json"
+
           # Leaderboard API's
           - id: "beijing_wii_lb"
             name: "Beijing Wii Leaderboard"
