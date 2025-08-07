@@ -384,7 +384,7 @@ const tournamentData = [
       },
       {
         "name": "Jamie",
-        "msid": "1078",
+        "msid": "2244",
         "result": "4th",
         "roundWins": 0
       },
@@ -396,7 +396,7 @@ const tournamentData = [
       },
       {
         "name": "KingOfLagg",
-        "msid": 2248,
+        "msid": "2248",
         "result": "6th",
         "roundWins": 0
       },
@@ -444,7 +444,7 @@ const tournamentData = [
       },
       {
         "name": "Centraa",
-        "msid": 2249,
+        "msid": "2249",
         "result": "12th",
         "roundWins": 0
       }
