@@ -68,7 +68,7 @@ const tournamentData = [
         "roundWins": 2
       },
       {
-        "name": "Carterferris07",
+        "name": "Maddieferris29",
         "msid": "0567",
         "result": "Final Losers Bracket",
         "roundWins": 2
@@ -270,7 +270,7 @@ const tournamentData = [
         "roundWins": 0
       },
       {
-        "name": "Carterferris07",
+        "name": "Maddieferris29",
         "msid": "0567",
         "result": "19th",
         "roundWins": 0
@@ -425,7 +425,7 @@ const tournamentData = [
         "roundWins": 0
       },
       {
-        "name": "Carterferris07",
+        "name": "Maddieferris29",
         "msid": "0567",
         "result": "11th",
         "roundWins": 0
