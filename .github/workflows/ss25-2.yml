@@ -1,0 +1,32 @@
+name: JSON SS25-2
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Elke 5 minuten
+  workflow_dispatch:        # Handmatig triggeren mogelijk
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download RAW JSON
+        run: |
+          # Gebruik curl met -L om redirects te volgen
+          curl -Ls "https://script.google.com/macros/s/AKfycbwHkvM4Yk9njJSZZg9FlDoeiBplFPCNgV9BKefU0KcS41y7xEGFCN0Y7i2W0DWd0iQq/exec" > ss25-2.json
+          
+          # Simpele check of het JSON is
+          if ! grep -q '{' ss25-2.json; then
+            echo "ERROR: Geen JSON ontvangen!"
+            head ss25-2.json  # Toon eerste regels voor debug
+            exit 1
+          fi
+
+      - name: Push naar GitHub
+        run: |
+          git config user.name "GitHub Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ss25-2.json
+          git commit -m "Auto-update: $(date +'%H:%M')" || exit 0
+          git push
