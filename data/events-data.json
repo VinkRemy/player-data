@@ -449,5 +449,118 @@ const tournamentData = [
         "roundWins": 0
       }
     ]
+  },
+  {
+    "name": "M&S World Championship 2025",
+    "participants": [
+      {
+        "name": "Name",
+        "msid": "MSID",
+        "result": "Result",
+        "roundWins": "Round Wins"
+      },
+      {
+        "name": "Andres",
+        "msid": "0028",
+        "result": "Winner",
+        "roundWins": 3
+      },
+      {
+        "name": "Ricci",
+        "msid": "0003",
+        "result": "Runner-Up",
+        "roundWins": 2
+      },
+      {
+        "name": "Fabi",
+        "msid": "0194",
+        "result": "3rd",
+        "roundWins": 2
+      },
+      {
+        "name": "Remy",
+        "msid": "0006",
+        "result": "4th",
+        "roundWins": 1
+      },
+      {
+        "name": "✯Catanne★",
+        "msid": "0316",
+        "result": "5th",
+        "roundWins": 0
+      },
+      {
+        "name": "SirToastington",
+        "msid": "0070",
+        "result": "5th",
+        "roundWins": 0
+      },
+      {
+        "name": "Chall99",
+        "msid": "0075",
+        "result": "7th",
+        "roundWins": 0
+      },
+      {
+        "name": "NPCCommand",
+        "msid": "0048",
+        "result": "8th",
+        "roundWins": 0
+      },
+      {
+        "name": "Jamie_SSBU",
+        "msid": 2244,
+        "result": "9th",
+        "roundWins": 0
+      },
+      {
+        "name": "KingOfLagg",
+        "msid": 2248,
+        "result": "10th",
+        "roundWins": 0
+      },
+      {
+        "name": "Shiro",
+        "msid": 2155,
+        "result": "11th",
+        "roundWins": 0
+      },
+      {
+        "name": "ViktorJAVO",
+        "msid": "0145",
+        "result": "12th",
+        "roundWins": 0
+      },
+      {
+        "name": "JuanPablo12",
+        "msid": "0171",
+        "result": "13th",
+        "roundWins": 0
+      },
+      {
+        "name": "silkychris999",
+        "msid": "0257",
+        "result": "14th",
+        "roundWins": 0
+      },
+      {
+        "name": "JuanPablo12",
+        "msid": "0171",
+        "result": "15th",
+        "roundWins": 0
+      },
+      {
+        "name": "silkychris999",
+        "msid": "0257",
+        "result": "16th",
+        "roundWins": 0
+      },
+      {
+        "name": "pj",
+        "msid": "2254",
+        "result": "17th",
+        "roundWins": 0
+      }
+    ]
   }
 ];
