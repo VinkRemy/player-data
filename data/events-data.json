@@ -23,19 +23,19 @@ const tournamentData = [
       {
         "name": "yee312",
         "msid": "0306",
-        "result": "Final Losers Bracket",
+        "result": "3rd",
         "roundWins": 2
       },
       {
         "name": "sarasanugget",
         "msid": null,
-        "result": "Round 2 Losers Bracket",
+        "result": "4th",
         "roundWins": 1
       },
       {
         "name": "Manucoel",
         "msid": "0563",
-        "result": "Round 1 Losers Bracket",
+        "result": "5th",
         "roundWins": 0
       }
     ]
@@ -64,43 +64,43 @@ const tournamentData = [
       {
         "name": "SirToastington",
         "msid": "0070",
-        "result": "Final Winners Bracket",
+        "result": "3rd",
         "roundWins": 2
       },
       {
         "name": "Maddieferris29",
         "msid": "0567",
-        "result": "Final Losers Bracket",
+        "result": "4th",
         "roundWins": 2
       },
       {
         "name": "ViktorJAVO",
         "msid": "0145",
-        "result": "Semi Final Losers Bracket",
+        "result": "5th",
         "roundWins": 2
       },
       {
         "name": "Andres",
         "msid": "0028",
-        "result": "Semi Final Losers Bracket",
+        "result": "5th",
         "roundWins": 1
       },
       {
         "name": "Erex",
         "msid": null,
-        "result": "Round 2 Losers Bracket",
+        "result": "7th",
         "roundWins": 1
       },
       {
         "name": "Zaxxa",
         "msid": "0364",
-        "result": "Round 2 Losers Bracket",
+        "result": "7th",
         "roundWins": 1
       },
       {
         "name": "JenteJ",
         "msid": "0004",
-        "result": "Round 1 Losers Bracket",
+        "result": "9th",
         "roundWins": 0
       }
     ]
@@ -129,25 +129,25 @@ const tournamentData = [
       {
         "name": "Manucoel",
         "msid": "0563",
-        "result": "Round 3 Losers Bracket",
+        "result": "3rd",
         "roundWins": 2
       },
       {
         "name": "Nameless",
         "msid": "0279",
-        "result": "Round 2 Losers Bracket",
+        "result": "4th",
         "roundWins": 1
       },
       {
         "name": "Remy",
         "msid": "0006",
-        "result": "Round 1 Losers Bracket",
+        "result": "5th",
         "roundWins": 0
       },
       {
         "name": "Ricci",
         "msid": "0003",
-        "result": "Round 1 Losers Bracket",
+        "result": "5th",
         "roundWins": 0
       }
     ]
