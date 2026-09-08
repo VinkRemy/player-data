@@ -33,7 +33,7 @@ jobs:
             url: "https://script.google.com/macros/s/AKfycbyGYBU_18_i6QsXi1wmsLwaJg2tMhB8e4a34UMhT6ZElJ-t3QEv5JNG0dgFORWZdoGL/exec"
             filename: "data/videos-data.json"
 
-            id: "awards_data"
+          - id: "awards_data"
             name: "Awards Data"
             url: "https://script.google.com/macros/s/AKfycbylSWq_9NTYOyHQTx9_BkfwVmg2TLfkabez08tEmQeBnbNlq68zVdSPkkpxEzu8N26a/exec"
             filename: "data/awards-data.json"
