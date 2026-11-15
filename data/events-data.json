@@ -80,7 +80,7 @@ const tournamentData = [
         "roundWins": 2
       },
       {
-        "name": "Andres",
+        "name": "Autumn",
         "msid": "0028",
         "result": "5th",
         "roundWins": 1
@@ -460,8 +460,8 @@ const tournamentData = [
         "roundWins": "Round Wins"
       },
       {
-        "name": "Andres",
-        "msid": "#N/A",
+        "name": "Autumn",
+        "msid": "0028",
         "result": "Winner",
         "roundWins": 3
       },
