@@ -1,4 +1,3 @@
-const tournamentData = [
   {
     "name": "Crappy Covid 2020",
     "participants": [
@@ -563,4 +562,3 @@ const tournamentData = [
       }
     ]
   }
-];
