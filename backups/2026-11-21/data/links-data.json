@@ -1,0 +1,116 @@
+{
+  "categories": [
+    {
+      "title": "General",
+      "items": [
+        { "label": "M&S General Discord Server", "url": "https://discord.com/invite/36jGZXHcgR" },
+        { "label": "M&S TAS Discord Server", "url": "https://discord.gg/sNC7hhj4GP" },
+        { "label": "M&S World Records Document", "url": "https://docs.google.com/spreadsheets/d/13NL-kwAPUaVsRhIylXXG5N7ihPa1XoHyScm7JFzf7j4/edit?usp=drivesdk" },
+        { "label": "M&S Top 10s Document", "url": "https://docs.google.com/spreadsheets/d/1-BZGz7l_1zKkq2dcgHFsFIDKN_7kPQW0AnFffEFJgLo/edit?usp=sharing" }
+      ]
+    },
+    {
+      "title": "Speedrun.com",
+      "items": [
+        { "label": "Series Page", "url": "https://www.speedrun.com/series/mario_and_sonic_series" },
+        { "label": "Beijing Wii", "url": "https://www.speedrun.com/mandsatog" },
+        { "label": "Beijing DS", "url": "https://www.speedrun.com/mario_and_sonic_at_the_olympic_games_ds" },
+        { "label": "Vancouver Wii", "url": "https://www.speedrun.com/masowg" },
+        { "label": "Vancouver DS", "url": "https://www.speedrun.com/Van10" },
+        { "label": "London Wii", "url": "https://www.speedrun.com/masatl2012wii" },
+        { "label": "London 3DS", "url": "https://www.speedrun.com/mario_and_sonic_at_the_london_2012_olympic_games_3ds" },
+        { "label": "Sochi", "url": "https://www.speedrun.com/masats2014owg" },
+        { "label": "Rio Wii U", "url": "https://www.speedrun.com/ms2016" },
+        { "label": "Rio 3DS", "url": "https://www.speedrun.com/mario_and_sonic_at_the_rio_2016_olympic_games_3ds" },
+        { "label": "Tokyo", "url": "https://www.speedrun.com/mas2020" },
+        { "label": "Multiple M&S Games", "url": "https://www.speedrun.com/mmasg" },
+        { "label": "Sonic at the Olympic Games Tokyo 2020", "url": "https://www.speedrun.com/sonic_at_the_winter_olympic_games" },
+        { "label": "Sonic at the Olympic Games", "url": "https://www.speedrun.com/sonic_at_the_winter_olympic_games" },
+        { "label": "Sonic at the Olympic Winter Games", "url": "https://www.speedrun.com/sonic_at_the_winter_olympic_games" }
+      ]
+    },
+    {
+      "title": "Game Resources",
+      "items": [
+        { "label": "Beijing Wii Kalle's Guide", "url": "https://gamefaqs.gamespot.com/wii/938798-mario-and-sonic-at-the-olympic-games/faqs/53803" },
+        { "label": "Beijing DS Sheet", "url": "https://docs.google.com/spreadsheets/d/1325QEmLXYibLpFNJ_3oEU6Dn7LDxnGhlnt1znyotYfg/edit?usp=sharing" },
+        { "label": "Vancouver DS Sheet", "url": "https://docs.google.com/spreadsheets/d/1MqPLErD0u-VKjMQ5TmSQnMyKuXvNk4xgf_c8h4-qjMY/edit?usp=sharing" },
+        { "label": "Vancouver DS Times/Scores", "url": "https://docs.google.com/spreadsheets/d/1cTzAG0IjHzt66B-_gEuGMp3PGZzilucvDQgaFZFy-os/edit?usp=sharing" },
+        { "label": "Vancouver DS TAS Resources", "url": "https://drive.google.com/file/d/1CMG9i8fztcEgC0S8VBDZzE-LJcKBEgAC/view?usp=sharing" },
+        { "label": "London 3DS Sheet", "url": "https://docs.google.com/spreadsheets/d/1u64AwZoXWuT-orHH-hlTaSk9uwgtaB5UDZI8l9pEYYo/edit?usp=sharing" },
+        { "label": "London 3DS WR History", "url": "https://docs.google.com/spreadsheets/d/1Erbexhf1xskGWnNYEyONQWUgYa8H9IR60q4SrTvNVw8/edit?usp=sharing" },
+        { "label": "London 3DS Best Strats", "url": "https://docs.google.com/spreadsheets/d/1tscPXArXSOn3TeOvH43qSMbov4Y8A2mnVgW9EA61ux8/edit?usp=sharing" },
+        { "label": "London 3DS National Records", "url": "https://docs.google.com/spreadsheets/d/11rHX6ZF7lKB_SoDKUKJLBS2idT6vQppOL0Zi8ltX95U/edit?usp=sharing" },
+        { "label": "London 3DS WR Playlist", "url": "https://www.youtube.com/playlist?list=PLwQqIuQk4ciCRK7Hz1sy8qRjjJV7-TJXc" },
+        { "label": "Sochi Nintendo Network Leaderboards", "url": "https://mariosoniccentral.com/sochi-nintendo-network-leaderboards/" },
+        { "label": "Rio Wii U Nintendo Network Leaderboards", "url": "https://mariosoniccentral.com/rio-wii-u-nintendo-network-leaderboards/" },
+        { "label": "Rio 3DS Nintendo Network Leaderboards", "url": "https://mariosoniccentral.com/rio-3ds-nintendo-network-leaderboards/" },
+        { "label": "Rio 3DS Top 100s", "url": "https://docs.google.com/spreadsheets/d/1GQiNrXRiQf-NkW2MzDXFxC9i-AeuBscxZ2XhnXYSSB4/edit?usp=sharing" },
+        { "label": "Rio 3DS Outfit Combinations Sheet", "url": "https://docs.google.com/spreadsheets/d/1Yt7tGPmwQOw9DhQwQ-ipJGI7LRc5CKpWv1LImUdwApQ/edit?usp=sharing" },
+        { "label": "Tokyo Individual Levels Guide", "url": "https://gamefaqs.gamespot.com/switch/261286-mario-and-sonic-at-the-olympic-games-tokyo-2020/faqs/82092/introduction" },
+        { "label": "Tokyo Best Record for Each Character", "url": "https://docs.google.com/spreadsheets/d/1KQ1h533ymYmdM_4DuSv-YzT7RCoO8Y7G4GVH9AHRvmo/edit?gid=998469961#gid=998469961" }
+      ]
+    },
+    {
+      "title": "TAS Resources",
+      "items": [
+        { "label": "Discord Server", "url": "https://discord.com/invite/sNC7hhj4GP" },
+        { "label": "Download Bizhawk", "url": "https://drive.google.com/drive/folders/1Vnh1QZFHAADInd-LPLjjth1BCLyPmSFm" },
+        { "label": "M&S TAS Files (Arca9)", "url": "https://drive.google.com/drive/folders/1cQFbcdpkD6gFBM_rUWL9zNq1Exhv24ld" },
+        { "label": "M&S TAS Files (Remy)", "url": "https://drive.google.com/drive/folders/1RYwqIV11L5-a9vt07YS_67NKJxZvbVHj" },
+        { "label": "Save Files", "url": "https://drive.google.com/drive/folders/1cvKrkJCjkFtOR5D4K7DLyxOVniTwc5BH?usp=drive_link" },
+        { "label": "TAS Media", "url": "https://drive.google.com/drive/folders/17DJ_svbTBFOIVFLvr2Zjzm1B_Ej8tbBK?usp=drive_link" },
+        { "label": "M&S TAS Videos", "url": "https://youtube.com/playlist?list=PLICURAEFBJSMgUu7nhqgXldNzQ2LnNMUf&si=esNDzySYIsQlonCI" },
+        { "label": "TASVideos.org", "url": "https://tasvideos.org/" },
+        { "label": "TASVideos Discord Server", "url": "https://discord.com/invite/7KSr7eZVzG" }
+      ]
+    },
+    {
+      "title": "Guides",
+      "items": [
+        { "label": "Tokyo Individual Levels Guide", "url": "https://gamefaqs.gamespot.com/switch/261286-mario-and-sonic-at-the-olympic-games-tokyo-2020/faqs/82092/introduction" }
+      ]
+    },
+    {
+      "title": "Discord Servers",
+      "items": [
+        { "label": "M&S General Discord Server", "url": "https://discord.com/invite/36jGZXHcgR" },
+        { "label": "M&S TAS Discord Server", "url": "https://discord.gg/sNC7hhj4GP" },
+        { "label": "Speedrun.com", "url": "https://discord.com/invite/0h6sul1ZwHVpXJmK" },
+        { "label": "Cyberscore", "url": "https://discord.com/invite/0ltq5mHzEqHnRc6N" },
+        { "label": "Video-Games-Records", "url": "https://discord.com/invite/nYsRzsZ" },
+        { "label": "TASVideos.org", "url": "https://discord.com/invite/7KSr7eZVzG" },
+        { "label": "Pretendo", "url": "https://discord.com/invite/7KSr7eZVzG" },
+        { "label": "Wii-Homebrew.com", "url": "https://discord.gg/bQXyB2d8Wj" },
+        { "label": "Wiimmfi", "url": "https://discord.gg/3gB4KMwpgh" },
+        { "label": "WiiLink", "url": "https://discord.gg/wiilink" },
+        { "label": "/r/3DS", "url": "https://discord.gg/3ds" }
+      ]
+    },
+    {
+      "title": "YouTube Links",
+      "items": [
+        { "label": "Dani's WFC Video (2014)", "url": "https://www.youtube.com/watch?v=DMndUlKFGsk" },
+        { "label": "M&S TAS Videos Playlist", "url": "https://www.youtube.com/watch?v=OwLI2y9d5Zw&list=PLICURAEFBJSMgUu7nhqgXldNzQ2LnNMUf" },
+        { "label": "TASVideos.org YT Channel", "url": "https://www.youtube.com/@TASVideosChannel" },
+        { "label": "Pretendo YT Channel", "url": "https://www.youtube.com/@pretendonetwork" }
+      ]
+    },
+    {
+      "title": "Sites & Forums",
+      "items": [
+        { "label": "Speedrun.com", "url": "http://speedrun.com" },
+        { "label": "Cyberscore", "url": "https://cyberscore.me.uk/scoreboards/starboard?series=31" },
+        { "label": "Video-Games-Records", "url": "https://www.videogamesrecords.net/en/serie-mario-sonic-at-the-olympic-games-s16" },
+        { "label": "SonicCenter", "url": "https://mas.soniccenter.org/" },
+        { "label": "TASVideos.org", "url": "https://tasvideos.org/" },
+        { "label": "Pretendo", "url": "https://pretendo.network/" },
+        { "label": "Reddit Page", "url": "https://www.reddit.com/r/marioandsonic/" },
+        { "label": "Gamefaqs", "url": "https://gamefaqs.gamespot.com/games/franchise/1427-mario-and-sonic" },
+        { "label": "Mario & Sonic Olympic Games Records (Old Site)", "url": "https://oldsite.mariosoniccentral.com" },
+        { "label": "M&S Olympics Rankings (Old Site)", "url": "https://ms-top-players-and-countries.jouwweb.nl/" },
+        { "label": "Wii-Records (Archived)", "url": "https://web.archive.org/web/20150327051401/http://wii-records.com/en-us/" }
+      ]
+    }
+  ]
+}
