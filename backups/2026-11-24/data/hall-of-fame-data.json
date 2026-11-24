@@ -1,0 +1,81 @@
+
+{
+  "mostWrsInYear": [
+    { "year": "2025", "player": "Fabi" },
+    { "year": "2024", "player": "Ricci" },
+    { "year": "2023", "player": "Harrison" },
+    { "year": "2022", "player": "Remy" }
+  ],
+  "worldChampions": {
+    "overall": [
+      { "year": "2025", "player": "Autumn183" },
+      { "year": "2024", "player": "Ricci" }
+    ],
+    "individual": {
+      "2025": [
+        { "game": "Beijing Wii", "player": "Ricci" },
+        { "game": "Beijing DS", "player": "Fabi" },
+        { "game": "Vancouver Wii", "player": "Ricci" },
+        { "game": "Vancouver DS", "player": "Chall99" },
+        { "game": "London Wii", "player": "Ricci" },
+        { "game": "London 3DS", "player": "Remy" },
+        { "game": "Sochi", "player": "Ricci" },
+        { "game": "Rio Wii U", "player": "Catanne" },
+        { "game": "Rio 3DS", "player": "SirToastington" },
+        { "game": "Tokyo", "player": "NPCCommand" }
+      ],
+      "2024": [
+        { "game": "Beijing Wii", "player": "silkychris999" },
+        { "game": "Beijing DS", "player": "silkychris999" },
+        { "game": "Vancouver Wii", "player": "Ricci" },
+        { "game": "Vancouver DS", "player": "ioha" },
+        { "game": "London Wii", "player": "Ricci" },
+        { "game": "London 3DS", "player": "Remy" },
+        { "game": "Sochi", "player": "Wolfy99" },
+        { "game": "Rio Wii U", "player": "Ricci" },
+        { "game": "Rio 3DS", "player": "SirToastington" },
+        { "game": "Tokyo", "player": "yee312" }
+      ]
+    }
+  },
+  "overallLeaderboardChampions": [
+    { "period": "Week 1 - Week 43", "player": "Remy" },
+    { "period": "Week 44 - Present", "player": "Fabi" }
+  ],
+  "allTimeRecords": [
+    { "category": "Points", "value": "1005", "player": "Fabi", "date": "23 Aug 26" },
+    { "category": "WRs", "value": "34", "player": "Fabi", "date": "2 Sep 26" },
+    { "category": "Top 10s", "value": "93", "player": "Fabi", "date": "23 Aug 26" }
+  ],
+  "mostTop10sAtYearEnd": [],
+  "gameLegends": [
+    { "game": "Beijing Wii", "player": "KalleGZ" },
+    { "game": "Sochi", "player": "Harrison" },
+    { "game": "Tokyo", "player": "NPCComander" },
+    { "game": "London 3DS", "player": "Remy" },
+    { "game": "Rio Wii U", "player": "✯Catanne★" },
+    { "game": "Tokyo", "player": "leo22" },
+    { "game": "Sochi", "player": "Jamie_SSBU" },
+    { "game": "Vancouver Wii", "player": "leo22" },
+    { "game": "Sochi", "player": "leo22" }
+  ],
+  "msAwards": {
+    "2025": [
+      { "category": "Best Player", "winner": "Fabi" },
+      { "category": "Best Console Player", "winner": "Catanne" },
+      { "category": "Best Handheld Player", "winner": "Fabi" },
+      { "category": "Best Newcomer", "winner": "Fabi" },
+      { "category": "Best Record", "winner": "Luge in 41.218 by Echo" },
+      { "category": "Best Discovery", "winner": "Tokyo Multiplayer Strats by Ioha" },
+      { "category": "Community Award", "winner": "Remy" }
+    ]
+  },
+  "multipleUntiedWrHolders": [
+    "Remy", "Ricci", "Harrison", "Hayden", "TAIWANTOP1", "Dani", "Guillaume",
+    "KalleGZ", "Nameless", "NPCCommand", "Vncz", "Mav", "(Deleted)",
+    "Winslinator", "ray97", "L.R", "Chall99", "ODW64Rulez", "Catanne",
+    "リョウマ", "☆HAYATO☆", "SirToastington", "Zaxxa", "テル", "Leonardo",
+    "Sol", "Jong", "たっくん", "UniteKoopa", "DempDaHemp", "leo22",
+    "Fabi", "Jamie_SSBU", "Autumn183", "Ioha"
+  ]
+}
